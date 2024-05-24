@@ -1,0 +1,22 @@
+{
+  "c6a4c1f2cd162adf976187a29a713953" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "19b34f84c5dd4c68",
+      "status" : "broken",
+      "statusDetails" : "Expected condition failed: waiting for visibility of element located by By.xpath: //a[contains(@class, 'add-basket')] (tried for 30 second(s) with 500 milliseconds interval)",
+      "time" : {
+        "start" : 1716562413764,
+        "stop" : 1716562463534,
+        "duration" : 49770
+      }
+    } ]
+  }
+}

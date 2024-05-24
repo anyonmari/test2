@@ -1,0 +1,30 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "anyonmari",
+    "children" : [ {
+      "name" : "5576@anyonmari.main(1)",
+      "children" : [ {
+        "name" : "Проверка на добавление товара в корзину",
+        "uid" : "19b34f84c5dd4c68",
+        "parentUid" : "a7eba414ac5bef17336952f7883b5169",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716562413764,
+          "stop" : 1716562463534,
+          "duration" : 49770
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a7eba414ac5bef17336952f7883b5169"
+    } ],
+    "uid" : "9909108ff9aae50fe92343356b355e34"
+  } ]
+}

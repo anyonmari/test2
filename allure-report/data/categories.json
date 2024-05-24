@@ -1,0 +1,30 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "Expected condition failed: waiting for visibility of element located by By.xpath: //a[contains(@class, 'add-basket')] (tried for 30 second(s) with 500 milliseconds interval)",
+      "children" : [ {
+        "name" : "Проверка на добавление товара в корзину",
+        "uid" : "19b34f84c5dd4c68",
+        "parentUid" : "a3df795387cb63c9c78bd501ac3d6846",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716562413764,
+          "stop" : 1716562463534,
+          "duration" : 49770
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a3df795387cb63c9c78bd501ac3d6846"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ]
+}

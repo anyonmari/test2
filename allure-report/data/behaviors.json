@@ -1,0 +1,26 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "Тесты связанные с провекрой добавления товара в корзину",
+    "children" : [ {
+      "name" : "Проверка на добавление товара в корзину",
+      "uid" : "19b34f84c5dd4c68",
+      "parentUid" : "5a3fa61c5d372d4cab99d38a498bcba1",
+      "status" : "broken",
+      "time" : {
+        "start" : 1716562413764,
+        "stop" : 1716562463534,
+        "duration" : 49770
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "5a3fa61c5d372d4cab99d38a498bcba1"
+  } ]
+}

@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"broken","Fri May 24 17:53:33 MSK 2024","Fri May 24 17:54:23 MSK 2024","49770","","UI.Tests.WBTests","","UI.Tests.WBTests","cartTet1","Проверка на добавление товара в корзину",""

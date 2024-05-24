@@ -1,0 +1,26 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "UI.Tests.WBTests",
+    "children" : [ {
+      "name" : "cartTet1",
+      "uid" : "19b34f84c5dd4c68",
+      "parentUid" : "e37f590a535ae7f404e044fa2e432b79",
+      "status" : "broken",
+      "time" : {
+        "start" : 1716562413764,
+        "stop" : 1716562463534,
+        "duration" : 49770
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "UI.Tests.WBTests"
+  } ]
+}
