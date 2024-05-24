@@ -9,19 +9,30 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
-    <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <junit.version>5.10.0</junit.version>
-        <allure.version>2.17.0</allure.version>
-        <allure-maven.version>2.12.0</allure-maven.version>
-        <commons-io.version>2.15.0</commons-io.version>
-        <maven-surefire.version>3.0.0-M5</maven-surefire.version>
-        <reportVersion.version>2.21.0</reportVersion.version>
-        <aspectj.version>1.9.21</aspectj.version>
-        <log4j.version>2.20.0</log4j.version>
-    </properties>
+
+        <properties>
+            <maven.compiler.source>17</maven.compiler.source>
+            <maven.compiler.target>17</maven.compiler.target>
+            <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+            <junit.version>5.10.0</junit.version>
+            <allure.version>2.17.0</allure.version>
+            <allure-maven.version>2.12.0</allure-maven.version>
+            <commons-io.version>2.15.0</commons-io.version>
+            <maven-surefire.version>3.0.0-M5</maven-surefire.version>
+            <reportVersion.version>2.21.0</reportVersion.version>
+            <aspectj.version>1.9.21</aspectj.version>
+            <log4j.version>2.20.0</log4j.version>
+            <allure-junit5.version>2.6.0</allure-junit5.version>
+        </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-junit5</artifactId>
+            <version>${allure-junit5.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
@@ -48,47 +59,4 @@
             </plugin>
         </plugins>
     </build>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>${junit.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-params</artifactId>
-            <version>${junit.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>${junit.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-junit5</artifactId>
-            <version>${allure.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-java-commons</artifactId>
-            <version>${allure.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjweaver</artifactId>
-            <version>${aspectj.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>${commons-io.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-            <version>${log4j.version}</version>
-        </dependency>
-    </dependencies>
 </project>
