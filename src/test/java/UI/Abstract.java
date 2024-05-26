@@ -25,11 +25,11 @@ public class Abstract {
     public static void setUp() {
         WebDriverManager.chromedriver().setup();
         options = new ChromeOptions();
-       /* options.addArguments("--headless");
+        options.addArguments("--headless");
         options.addArguments("--disable-gpu");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--window-size=1920,1080");*/  // Установите размер окна
+        options.addArguments("--window-size=1920,1080");  // Установите размер окна
         driver = new EventFiringWebDriver(new ChromeDriver(options));
         wait = new WebDriverWait(driver,30);
         actions = new Actions(driver);
