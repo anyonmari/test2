@@ -19,17 +19,18 @@ pipeline {
             }
         }
 
-        stage('Allure Report') {
-            steps {
-                allure includeProperties: false, jdk: '1.7', results: [[path: 'target/allure-results']]
-            }
-        }
+
     }
 
-    post {
-        always {
-            archiveArtifacts artifacts: '**/target/allure-results/**', allowEmptyArchive: true
-            junit '**/target/surefire-reports/*.xml'
-        }
-    }
+   post {
+           always {
+               // Генерация отчета Allure
+               script {
+                   allure includeProperties: false, jdk: '1.8', results: [[path: 'target/allure-results']]
+               }
+               // Архивирование артефактов и запись результатов тестов
+               archiveArtifacts artifacts: '**/target/allure-results/**', allowEmptyArchive: true
+               junit '**/target/surefire-reports/*.xml'
+           }
+       }
 }
