@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    tools {
+        maven 'maven jenkins'
+    }
     parameters {
         choice(name: 'TAG', choices: ['wb', 'wb1'], description: 'Choose the tag')
     }
