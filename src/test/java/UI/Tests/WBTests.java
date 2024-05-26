@@ -55,7 +55,7 @@ public class WBTests extends Abstract {
         Assertions.assertEquals(priceSecondItemMainPage, priceSecondItemPage, "Цена товара на главной странице не равна цене товара на карточке товара");
 
     }
-    @Tag("wb1")
+    @Tag("wb2")
     @Owner("Марина")
     @DisplayName("Проверка на соответсвие наимнования товара")
     @Test

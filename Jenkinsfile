@@ -4,7 +4,7 @@ pipeline {
         maven 'maven jenkins'
     }
     parameters {
-        choice(name: 'TAG', choices: ['wb', 'wb1'], description: 'Choose the tag')
+        choice(name: 'TAG', choices: ['wb', 'wb2'], description: 'Choose the tag')
     }
 
     stages {
