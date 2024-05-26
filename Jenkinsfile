@@ -13,7 +13,7 @@ pipeline {
                 script {
                     // Получить код из репозитория GitHub
                     git branch: 'main', url: 'https://github.com/anyonmari/test2.git'
-                    sh "mvn clean test -Dtags=${params.TAG}"
+                    sh "mvn clean test -Dgroups=${params.TAG}"
                     sh 'ls -la target/allure-results'
                 }
             }

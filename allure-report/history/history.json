@@ -9,13 +9,13 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "19b34f84c5dd4c68",
+      "uid" : "1673332b505a1e2b",
       "status" : "broken",
-      "statusDetails" : "Expected condition failed: waiting for visibility of element located by By.xpath: //a[contains(@class, 'add-basket')] (tried for 30 second(s) with 500 milliseconds interval)",
+      "statusDetails" : "stale element reference: stale element not found in the current frame\n  (Session info: chrome=125.0.6422.77)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'ANYONMARI', ip: '192.168.1.136', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.77, chrome: {chromedriverVersion: 125.0.6422.78 (14db42ec38ad..., userDataDir: C:\\Users\\anyon\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49986}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: c00071d445a9059b4df7c894ec45ed7f",
       "time" : {
-        "start" : 1716562413764,
-        "stop" : 1716562463534,
-        "duration" : 49770
+        "start" : 1716728930564,
+        "stop" : 1716728938697,
+        "duration" : 8133
       }
     } ]
   }

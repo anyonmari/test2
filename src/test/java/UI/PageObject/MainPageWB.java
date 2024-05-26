@@ -28,11 +28,11 @@ public class MainPageWB extends Abstract {
     @FindBy(xpath = "(//span[@class='product-card__name'])[2]")
     public WebElement productSecondCardName;
     public By productCardSecondNameWait = By.xpath("(//span[@class='product-card__name'])[2]");
-    @FindBy(xpath = "(//p[contains(@class, '__price')]//ins)[1]")
+    @FindBy(xpath = "(//ins[@class='price__lower-price wallet-price'])[1]")
     public WebElement priceFirst;
-    public By priceFirstWait = By.xpath("(//p[contains(@class, '__price')]//ins)[1]");
-    @FindBy(xpath = "(//p[contains(@class, '__price')]//ins)[2]")
+    public By priceFirstWait = By.xpath("(//ins[@class='price__lower-price wallet-price'])[1]");
+    @FindBy(xpath = "(//ins[@class='price__lower-price wallet-price'])[2]")
     public WebElement priceSecond;
-    public By priceSecondWait = By.xpath("(//p[contains(@class, '__price')]//ins)[2]");
+    public By priceSecondWait = By.xpath("(//ins[@class='price__lower-price wallet-price'])[2]");
 
 }

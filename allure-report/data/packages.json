@@ -5,13 +5,13 @@
     "name" : "UI.Tests.WBTests",
     "children" : [ {
       "name" : "cartTet1",
-      "uid" : "19b34f84c5dd4c68",
+      "uid" : "1673332b505a1e2b",
       "parentUid" : "e37f590a535ae7f404e044fa2e432b79",
       "status" : "broken",
       "time" : {
-        "start" : 1716562413764,
-        "stop" : 1716562463534,
-        "duration" : 49770
+        "start" : 1716728930564,
+        "stop" : 1716728938697,
+        "duration" : 8133
       },
       "flaky" : false,
       "newFailed" : false,

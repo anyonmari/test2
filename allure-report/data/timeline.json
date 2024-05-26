@@ -4,16 +4,16 @@
   "children" : [ {
     "name" : "anyonmari",
     "children" : [ {
-      "name" : "5576@anyonmari.main(1)",
+      "name" : "9212@anyonmari.main(1)",
       "children" : [ {
-        "name" : "Проверка на добавление товара в корзину",
-        "uid" : "19b34f84c5dd4c68",
-        "parentUid" : "a7eba414ac5bef17336952f7883b5169",
+        "name" : "Проверка на соответсвие цены товара",
+        "uid" : "1673332b505a1e2b",
+        "parentUid" : "c26a30492f58c66ab788359b78a5ea88",
         "status" : "broken",
         "time" : {
-          "start" : 1716562413764,
-          "stop" : 1716562463534,
-          "duration" : 49770
+          "start" : 1716728930564,
+          "stop" : 1716728938697,
+          "duration" : 8133
         },
         "flaky" : false,
         "newFailed" : false,
@@ -23,7 +23,7 @@
         "retriesStatusChange" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "a7eba414ac5bef17336952f7883b5169"
+      "uid" : "c26a30492f58c66ab788359b78a5ea88"
     } ],
     "uid" : "9909108ff9aae50fe92343356b355e34"
   } ]

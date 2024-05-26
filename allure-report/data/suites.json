@@ -4,14 +4,14 @@
   "children" : [ {
     "name" : "UI.Tests.WBTests",
     "children" : [ {
-      "name" : "Проверка на добавление товара в корзину",
-      "uid" : "19b34f84c5dd4c68",
+      "name" : "Проверка на соответсвие цены товара",
+      "uid" : "1673332b505a1e2b",
       "parentUid" : "3f7cbf92ce6fe46280521fcc55ccbcf9",
       "status" : "broken",
       "time" : {
-        "start" : 1716562413764,
-        "stop" : 1716562463534,
-        "duration" : 49770
+        "start" : 1716728930564,
+        "stop" : 1716728938697,
+        "duration" : 8133
       },
       "flaky" : false,
       "newFailed" : false,
