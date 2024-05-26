@@ -1,55 +1,89 @@
 package UI.Tests;
 
 import UI.Abstract;
+import UI.Cookies;
 import UI.PageObject.CartPageWB;
+import UI.PageObject.ItemPageWB;
 import UI.PageObject.MainPageWB;
-import UI.TestListener;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Step;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
-@ExtendWith(TestListener.class)
+
 @Feature("Тесты связанные с провекрой добавления товара в корзину")
 public class WBTests extends Abstract {
     MainPageWB mainPageWB;
-    CartPageWB cartPageWB;
+    ItemPageWB itemPageWB;
 
+    public By cookies = By.xpath("//button[@class = 'cookies__btn btn-minor-md']");
+
+    @Tag("wb")
     @Owner("Марина")
-    @DisplayName("Проверка на добавление товара в корзину")
-    @Step("Добавляем товар в корзину")
+    @DisplayName("Проверка на соответсвие цены товара")
     @Test
     public void cartTet1() {
         mainPageWB = new MainPageWB(driver);
         driver.get(mainPageWB.wb);
+
+        if(isDisplayed(cookies)) {
+            clickOnElement(cookies);
+        }
+
         int priceFirstItemMainPage = getPriceWithoutCurrency(mainPageWB.priceFirstWait);
-        System.out.println(priceFirstItemMainPage);
-
-        clickOnElement(mainPageWB.btnAddProductWait);
-
-        if(mainPageWB.isDisplayed(mainPageWB.sizeWait)) {
-            clickOnElement(mainPageWB.sizeWait);
-        }
-
-        clickOnElement(mainPageWB.btnAddProductSecondWait);
-
-        if(mainPageWB.isDisplayed(mainPageWB.sizeWait)) {
-                clickOnElement(mainPageWB.sizeWait);
-        }
         int priceSecondItemMainPage = getPriceWithoutCurrency(mainPageWB.priceSecondWait);
-        System.out.println(priceSecondItemMainPage);
-        clickOnElement(mainPageWB.cartWait);
-        cartPageWB = new CartPageWB(driver);
-        //cartPageWB.clickOnElement(cartPageWB.btnCountPlusWait);
-        int priceFirstItemCartPage = getPriceWithoutCurrency(cartPageWB.priceFirstInCartWait);
-        System.out.println(priceFirstItemCartPage);
-        int priceSecondItemCartPage = getPriceWithoutCurrency(cartPageWB.priceSecondInCartWait);
-        System.out.println(priceSecondItemCartPage);
+        clickOnElement(mainPageWB.firsItemCardWait);
 
-        Assertions.assertEquals(priceFirstItemMainPage, priceFirstItemCartPage, "Цена товара на главной странице не равна цене товара в корзине");
-        Assertions.assertEquals(priceSecondItemMainPage, priceSecondItemCartPage, "Цена товара на главной странице не равна цене товара в корзине");
+        itemPageWB = new ItemPageWB(driver);
+        int priceFirstItemPage = getPriceWithoutCurrency(itemPageWB.priceItemPageWait);
+        clickOnElement(itemPageWB.buttonBackItemPageWait);
+
+        mainPageWB = new MainPageWB(driver);
+        clickOnElement(mainPageWB.secondItemCardWait);
+
+
+        itemPageWB = new ItemPageWB(driver);
+        int priceSecondItemPage = getPriceWithoutCurrency(itemPageWB.priceItemPageWait);
+
+        Assertions.assertEquals(priceFirstItemMainPage, priceFirstItemPage, "Цена товара на главной странице не равна цене товара на карточке товара");
+        Assertions.assertEquals(priceSecondItemMainPage, priceSecondItemPage, "Цена товара на главной странице не равна цене товара на карточке товара");
+
     }
+    @Tag("wb1")
+    @Owner("Марина")
+    @DisplayName("Проверка на соответсвие наимнования товара")
+    @Test
+    public void cartTet2() {
+        mainPageWB = new MainPageWB(driver);
+        driver.get(mainPageWB.wb);
+
+        if(isDisplayed(cookies)) {
+            clickOnElement(cookies);
+        }
+
+        String nameFirstItemMainPge = getTextWebElement(mainPageWB.productCardFirstNameWait).replaceAll("/", "").trim();
+        String nameSecondItemMainPge = getTextWebElement(mainPageWB.productCardSecondNameWait).replaceAll("/", "").trim();
+        clickOnElement(mainPageWB.firsItemCardWait);
+
+        itemPageWB = new ItemPageWB(driver);
+        String nameFirstItemItemPage = getTextWebElement(itemPageWB.productNameItemPageWait);
+        clickOnElement(itemPageWB.buttonBackItemPageWait);
+
+        mainPageWB = new MainPageWB(driver);
+        clickOnElement(mainPageWB.secondItemCardWait);
+
+
+        itemPageWB = new ItemPageWB(driver);
+        String nameSecondItemItemPage = getTextWebElement(itemPageWB.productNameItemPageWait);
+
+        Assertions.assertEquals(nameFirstItemMainPge, nameFirstItemItemPage, "Наименование товара на главной странице не совпадает с наименованием товара на карточке товара");
+        Assertions.assertEquals(nameSecondItemMainPge, nameSecondItemItemPage, "Наименование товара на главной странице не совпадает с наименованием товара на карточке товара");
+    }
+
 }
