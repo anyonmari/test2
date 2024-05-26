@@ -10,7 +10,7 @@ pipeline {
             steps {
                 script {
                     // Получить код из репозитория GitHub
-                    git 'https://github.com/anyonmari/test.git'
+                    git branch: 'main', url: 'https://github.com/anyonmari/test.git'
                     sh "mvn clean test -Dtags=${params.TAG}"
                     sh 'ls -la target/allure-results'
                 }
